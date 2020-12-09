@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cashmasters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cashmasters.each do |cashmaster| %>
+      <tr>
+        <td><%= cashmaster.name %></td>
+        <td><%= cashmaster.price %></td>
+        <td><%= cashmaster.comments %></td>
+        <td><%= link_to 'Show', cashmaster %></td>
+        <td><%= link_to 'Edit', edit_cashmaster_path(cashmaster) %></td>
+        <td><%= link_to 'Destroy', cashmaster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cashmaster', new_cashmaster_path %>

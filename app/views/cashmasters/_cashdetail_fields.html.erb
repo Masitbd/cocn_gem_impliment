@@ -1,0 +1,36 @@
+<div class="nested-fields">
+  <div class="field">
+  <%= f.label :itemname %>
+    <%= f.text_field :itemname %>
+  
+  <%= f.label :qty %>
+    <%= f.number_field :qty %>
+  
+  <%= f.label :rate %>
+     <%= f.number_field :rate %>
+  </div> 
+  <%= link_to_remove_association "remove task", f %>
+</div>
+
+
+
+
+
+<div class="nested-fields container">
+  <div class="row">
+
+        <div class="field col-sm-8  row ">
+        <%= f.label :itemname %>
+            <%= f.text_field :itemname %>
+        
+        <%= f.label :qty %> 
+            <%= f.number_field :qty %>
+        
+        <%= f.label :rate %>
+            <%= f.number_field :rate %>
+        </div> 
+        <div class="col-sm-4">
+          <%= link_to_remove_association "remove task", f %>'
+        </div>
+    </div>    
+</div>

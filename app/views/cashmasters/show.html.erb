@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cashmaster.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @cashmaster.price %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @cashmaster.comments %>
+</p>
+
+<h3>Items list</h3>
+<ul>
+  <% for @cashdetail in @cashmaster.cashdetails %>
+  <li><%= @cashdetail.itemname %></li>
+  <li><%= @cashdetail.qty %></li>
+  <li><%= @cashdetail.rate %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_cashmaster_path(@cashmaster) %> |
+<%= link_to 'Back', cashmasters_path %>

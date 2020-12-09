@@ -1,0 +1,2 @@
+module CashmastersHelper
+end
